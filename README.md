@@ -351,7 +351,7 @@ Please read and cite our paper: [![arXiv](https://img.shields.io/badge/arXiv-241
 | GaussianVTON                                    | 2024     | 3D VTON multi-view humans       |                  |                   | 176.1   | 0.1654    | 18.00    |             | 81.71%                 |                      |
 
 **Notes:**
-- *Scaling caveats:* iEdit reports CLIPScore (%) and SSIM-M (% on edited/background regions). PIE-Bench reports “CLIP Semantics” (whole/edited) as un-normalized cosine-like scores (~20–26). LOCATEdit shows SSIM as ×10² and LPIPS unscaled (values ~39–42), while SwiftEdit’s ablation table uses LPIPS×10³ (not used above). Forgedit’s CLIPScore is cosine (0–1).
+- *Scaling caveats:* iEdit reports CLIPScore (%) and SSIM-M (% on edited/background regions). PIE-Bench reports “CLIP Semantics” (whole/edited) as un-normalized cosine-like scores (~20–26). LOCATEdit shows SSIM as ×10² and LPIPS unscaled (values ~39–42). Forgedit’s CLIPScore is cosine (0–1).
 - [a] RegionDrag reports LPIPS×100; we divide by 100 (thus 9.9→0.099, 9.2→0.092).
 
 
