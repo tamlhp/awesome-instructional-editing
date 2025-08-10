@@ -328,6 +328,190 @@ Please read and cite our paper: [![arXiv](https://img.shields.io/badge/arXiv-241
 | Robustness | Noise Robustness | $\text{NR} = \frac{1}{N} \sum_{i=1}^{N} \|\|x_i - x_{i,\text{noisy}}\|\|$ | Evaluates model robustness to noise. |
 | | Perceptual Quality | $\text{PQ} = \frac{1}{N} \sum_{i=1}^{N} \text{Score}(x_i)$ | A subjective quality metric based on human judgment. |
 
+----------
+## Benchmark Results
+| **Method**                                      | **Year** | **Benchmark Dataset**           | **CLIP (Whole)** | **CLIP (Edited)** | **FID** | **LPIPS** | **PSNR** | **MSE×10⁴** | **SSIM/SSIM-M (edit)** | **SSIM/SSIM-M (bg)** |
+|-------------------------------------------------|----------|---------------------------------|------------------|-------------------|---------|-----------|----------|-------------|------------------------|----------------------|
+| DiffEdit                                        | 2022     | iEdit eval — *real imgs*        | 64.39%           |                   | **100** |           |          |             | **82.06%**             | 91.88%               |
+| DALL·E 2 (inpaint)                              | 2022     | iEdit eval — *real imgs*        | 65.46%           |                   | 162     |           |          |             | 74.41%                | **93.97%**           |
+| InstructPix2Pix                                 | 2023     | iEdit eval — *real imgs*        | 66.91%           |                   | 145     |           |          |             | 80.59%                | 79.92%               |
+| iEdit-M                                         | 2024     | iEdit eval — *real imgs*        | **67.44%**       |                   | 147     |           |          |             | 74.98%                | 80.44%               |
+| InfEdit (VI*+UAC)                               | 2024     | PIE-Bench (aggregated)          | 25.03%           | 22.22%            |         | 47.58     | 28.51    | 32.09       |                        | 85.66%               |
+| SwiftEdit (one-step)                            | 2025     | PIE-Bench                       | 25.16%           | 21.25%            |         |           | 23.33    | 6.60        |                        |                      |
+| SwiftEdit (GT masks)                            | 2025     | PIE-Bench                       | 25.56%           | 21.91%            |         |           | 23.31    | **6.18**    |                        |                      |
+| LOCATEdit (PnP-I DDIM(50))                      | 2025     | PIE-Bench                       | 25.96%           | **23.02%**        |         | 41.60     | **29.20** | 26.90       | 86.53% (SSIM×10²)       |                      |
+| LOCATEdit (EF DPM-Solver++(20))                 | 2025     | PIE-Bench                       | **26.07%**       | 22.43%            |         | 39.31     | 29.16    | 24.01       | 86.52% (SSIM×10²)       |                      |
+| Forgedit                                        | 2023     | TEdBench (100 edits)            | 77.10%           |                   | **7.071**| 0.534     |          |             |                        |                      |
+| GroupDiff                                       | 2024     | LV-MHP-v2 (val)                 | 86.90%           |                   | 18.10   | 0.0730    | 19.46    |             | 80.33%                 |                      |
+| FreeEdit                                        | 2024     | FreeBench (reference-based, 200 cases) | 81.59%           | 30.34%            |         |           |          | 286         |                        |                      |
+| RegionDrag                                      | 2024     | DragBench-S(R) / DragBench-D(R) |                  |                   |         | 0.099 / 0.092[a] |          |             |                        |                      |
+| Pix2Pix-OnTheFly                                | 2024     | MAGICBRUSH (1-shot, 1-caption, BLIP) | 83.10%           | 28.17%            |         |           |          |             |                        |                      |
+| D-Edit                                          | 2024     | D-Item (Text)                   | 42.0%            |                   |         | 0.179     |          |             |                        |                      |
+| MedEdit                                         | 2024     | ATLAS v2.0 (stroke)             |                  |                   | 8.30    |           |          |             |                        |                      |
+| GaussianVTON                                    | 2024     | 3D VTON multi-view humans       |                  |                   | 176.1   | 0.1654    | 18.00    |             | 81.71%                 |                      |
+
+**Notes:**
+- *Scaling caveats:* iEdit reports CLIPScore (%) and SSIM-M (% on edited/background regions). PIE-Bench reports “CLIP Semantics” (whole/edited) as un-normalized cosine-like scores (~20–26). LOCATEdit shows SSIM as ×10² and LPIPS unscaled (values ~39–42), while SwiftEdit’s ablation table uses LPIPS×10³ (not used above). Forgedit’s CLIPScore is cosine (0–1).
+- [a] RegionDrag reports LPIPS×100; we divide by 100 (thus 9.9→0.099, 9.2→0.092).
+
+
+----------
+## Experiment Configuration
+```
+pip install --upgrade diffusers transformers accelerate safetensors torch torchvision
+```
+
+```python
+import torch, PIL.Image as Image
+from diffusers import (
+    StableDiffusionInstructPix2PixPipeline,
+    StableDiffusionDiffEditPipeline,
+    PaintByExamplePipeline,
+    DDIMScheduler, DDIMInverseScheduler,
+)
+
+DEVICE = "cuda" if torch.cuda.is_available() else "cpu"
+
+# 1) InstructPix2Pix — text-guided global/local edits
+def run_ip2p(input_path, instruction, out_path="out_ip2p.png", steps=30):
+    pipe = StableDiffusionInstructPix2PixPipeline.from_pretrained(
+        "timbrooks/instruct-pix2pix", torch_dtype=torch.float16 if DEVICE=="cuda" else torch.float32
+    ).to(DEVICE)
+    image = Image.open(input_path).convert("RGB")
+    result = pipe(prompt=instruction, image=image,
+                  num_inference_steps=steps, guidance_scale=7.5, image_guidance_scale=1.5).images[0]
+    result.save(out_path); return out_path
+
+# 2) DiffEdit — automatic mask + latent inversion for targeted edits
+def run_diffedit(input_path, source_prompt, target_prompt, out_path="out_diffedit.png", steps=50):
+    init_img = Image.open(input_path).convert("RGB")
+    pipe = StableDiffusionDiffEditPipeline.from_pretrained(
+        "runwayml/stable-diffusion-v1-5",
+        torch_dtype=torch.float16 if DEVICE=="cuda" else torch.float32
+    ).to(DEVICE)
+    pipe.scheduler = DDIMScheduler.from_config(pipe.scheduler.config)
+    pipe.inverse_scheduler = DDIMInverseScheduler.from_config(pipe.scheduler.config)
+
+    mask = pipe.generate_mask(image=init_img, source_prompt=source_prompt, target_prompt=target_prompt,
+                              num_inference_steps=steps)[0]
+    inv = pipe.invert(prompt=source_prompt, image=init_img, num_inference_steps=steps)
+    edited = pipe(prompt=target_prompt, negative_prompt=source_prompt,
+                  image=init_img, mask_image=mask, latents=inv.latents,
+                  num_inference_steps=steps).images[0]
+    edited.save(out_path); return out_path
+
+# 3) Paint-by-Example — exemplar-guided local replacement
+def run_pbe(input_path, mask_path, example_path, out_path="out_pbe.png", steps=50):
+    pipe = PaintByExamplePipeline.from_pretrained(
+        "Fantasy-Studio/Paint-by-Example",
+        torch_dtype=torch.float16 if DEVICE=="cuda" else torch.float32
+    ).to(DEVICE)
+    image = Image.open(input_path).convert("RGB")
+    mask  = Image.open(mask_path).convert("L")         # white = repaint
+    ex    = Image.open(example_path).convert("RGB")
+    edited = pipe(image=image, mask_image=mask, example_image=ex,
+                  num_inference_steps=steps, guidance_scale=5.0).images[0]
+    edited.save(out_path); return out_path
+
+# Example usage (where input.jpg, fruit.jpg, etc. are your input data)
+run_ip2p("input.jpg", "make the sky pink at sunset")
+run_diffedit("fruit.jpg", "a bowl of apples", "a bowl of pears")
+run_pbe("room.jpg", "room_mask.png", "new_chair.jpg")
+```
+
+## Repo-based Configuration
+### Add-it (training-free insertion)
+<details>
+  <summary>Click to open</summary>
+
+```
+git clone https://github.com/NVlabs/addit && cd addit
+conda env create -f environment.yml && conda activate addit
+# real image insertion:
+python run_CLI_addit_real.py \
+  --source_image "images/bed_dark_room.jpg" \
+  --prompt_source "A photo of a bed in a dark room" \
+  --prompt_target "A photo of a dog lying on a bed in a dark room" \
+  --subject_token "dog"
+```
+</details>
+
+### FreeEdit (mask-free, reference-based)
+<details>
+  <summary>Click to open</summary>
+
+```
+git clone https://github.com/hrz2000/FreeEdit && cd FreeEdit
+pip install -r requirements.txt
+# check README / demo notebook for single-command inference
+```
+</details>
+
+### Grounded-Instruct-Pix2Pix (auto target grounding)
+<details>
+  <summary>Click to open</summary>
+
+```
+git clone https://github.com/arthur-71/Grounded-Instruct-Pix2Pix && cd Grounded-Instruct-Pix2Pix
+pip install -r requirements.txt && python -m spacy download en_core_web_sm
+# install GroundingDINO (per README), then open the provided notebook:
+# jupyter notebook grounded-instruct-pix2pix.ipynb
+```
+</details>
+
+### RegionDrag (fast region edits/UI)
+<details>
+  <summary>Click to open</summary>
+
+```
+git clone https://github.com/Visual-AI/RegionDrag && cd RegionDrag
+pip install -r requirements.txt
+# see UI_GUIDE.md for the GUI runner; a minimal script is included in the repo
+```
+</details>
+
+### ZONE (localized editing)
+<details>
+  <summary>Click to open</summary>
+
+```
+git clone https://github.com/lsl001006/ZONE && cd ZONE
+pip install -r requirements.txt
+python demo.py --input your.jpg --prompt "make the mug red" --mask path/to/mask.png
+```
+</details>
+
+### D-Edit (freestyle mask-conditioned)
+<details>
+  <summary>Click to open</summary>
+
+
+```
+git clone https://github.com/collovlab/d-edit && cd d-edit
+pip install -r requirements.txt
+python app.py --input your.jpg --mask mask.png --prompt "replace the sofa with a blue one"
+```
+</details>
+
+### Pix2Pix-Zero / On-the-Fly (training-free, edit direction)
+<details>
+  <summary>Click to open</summary>
+  
+```
+git clone https://github.com/pix2pixzero/pix2pix-zero && cd pix2pix-zero
+pip install -r requirements.txt
+# see README + HF demo link for quick usage
+```
+
+Eedit the synthetic images generated by Stable Diffusion with the following command.
+```
+python src/edit_synthetic.py \
+    --results_folder "output/synth_editing" \
+    --prompt_str "a high resolution painting of a cat in the style of van gogh" \
+    --task "cat2dog"
+```
+
+</details>
 
 ----------
 **Disclaimer**
