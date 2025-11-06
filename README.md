@@ -30,9 +30,20 @@ A collection of academic articles, published methodology, and datasets on the su
 
 A sortable version is available here: https://awesome-instruction-editing.github.io/
 
+<p align="left">
+Please read and cite our paper:
+  <a href="https://www.sciencedirect.com/science/article/pii/S0952197625029847">
+    <img src="https://www.sciencedirect.com/shared-assets/24/images/elsevier-non-solus-new-grey.svg" alt="ACM" width="30"/>
+  </a>
+</p>
+
+>Nguyen, Thanh Tam, Zhao Ren, Trinh Pham, Phi Le Nguyen, Quoc Viet Hung Nguyen, and Hongzhi Yin. "A review of instruction-guided image editing." Engineering Applications of Artificial Intelligence 163 (2026): 112953. https://doi.org/10.1016/j.engappai.2025.112953
+
 ## 🔖 News!!!
 
 📌 We are actively tracking the **latest research** and welcome contributions to our repository and survey paper. If your studies are relevant, please feel free to create an issue or a pull request.
+
+📰 2025-10-30: Our work has been published in [Engineering Applications of Artificial Intelligence](https://www.sciencedirect.com/science/article/pii/S0952197625029847). Thanks a lot for your continuous supports.
 
 📰 2024-11-15: Our paper **Instruction-Guided Editing Controls for Images and Multimedia: A Survey in LLM era** has been revised into version 1 with new methods and dicussions.
 
@@ -40,9 +51,17 @@ A sortable version is available here: https://awesome-instruction-editing.github
 
 If you find this work helpful in your research, welcome to cite the paper and give a ⭐.
 
-Please read and cite our paper: [![arXiv](https://img.shields.io/badge/arXiv-2411.09955-b31b1b.svg)](https://arxiv.org/abs/2411.09955)
-
->Nguyen, T.T., Ren, Z., Pham, T., Huynh, T.T., Nguyen, P.L., Yin, H., and Nguyen, Q.V.H., 2024. Instruction-Guided Editing Controls for Images and Multimedia: A Survey in LLM Era. arXiv preprint arXiv:2411.09955.
+```
+@article{nguyen2026review,
+  title={A review of instruction-guided image editing},
+  author={Nguyen, Thanh Tam and Ren, Zhao and Pham, Trinh and Le Nguyen, Phi and Nguyen, Quoc Viet Hung and Yin, Hongzhi},
+  journal={Engineering Applications of Artificial Intelligence},
+  volume={163},
+  pages={112953},
+  year={2026},
+  publisher={Elsevier}
+}
+```
 
 ```
 @article{nguyen2024instruction,
@@ -525,5 +544,6 @@ If you have some other related references, please feel free to create a Github i
 ![Visitor Count](https://img.shields.io/badge/dynamic/json?color=success&label=visits&query=value&url=https://raw.githubusercontent.com/tamlhp/awesome-instruction-editing/main/data/visits.json)
 
 ![Visitors](https://margherita-gustatory-zane.ngrok-free.dev/badge/tamlhp%2Fawesome-instructional-editing.svg?ngrok-skip-browser-warning=true)
+
 
 
