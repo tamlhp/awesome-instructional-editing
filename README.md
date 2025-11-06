@@ -45,7 +45,7 @@ Please read and cite our paper:
 
 📰 2025-10-30: Our work has been published in [Engineering Applications of Artificial Intelligence](https://www.sciencedirect.com/science/article/pii/S0952197625029847). Thanks a lot for your continuous supports.
 
-📰 2024-11-15: Our paper **Instruction-Guided Editing Controls for Images and Multimedia: A Survey in LLM era** has been revised into version 1 with new methods and dicussions.
+📰 2024-11-15: Our paper [Instruction-Guided Editing Controls for Images and Multimedia: A Survey in LLM era](https://arxiv.org/abs/2411.09955) has been revised into version 1 with new methods and dicussions.
 
 ## 🔍 Citation
 
@@ -544,6 +544,7 @@ If you have some other related references, please feel free to create a Github i
 ![Visitor Count](https://img.shields.io/badge/dynamic/json?color=success&label=visits&query=value&url=https://raw.githubusercontent.com/tamlhp/awesome-instruction-editing/main/data/visits.json)
 
 ![Visitors](https://margherita-gustatory-zane.ngrok-free.dev/badge/tamlhp%2Fawesome-instructional-editing.svg?ngrok-skip-browser-warning=true)
+
 
 
 
