@@ -211,6 +211,7 @@ If you find this work helpful in your research, welcome to cite the paper and gi
 ## Approaches for Media Editing
 | **Title** | **Year** | **Venue** | **Category** | **Code** |
 | -------|------|-------|----------|------|
+| <mark>[SST-EM: Advanced Metrics for Evaluating Semantic, Spatial and Temporal Aspects in Video Editing](https://openaccess.thecvf.com/content/WACV2025W/ImageQuality/papers/Biyyala_SST-EM_Advanced_Metrics_for_Evaluating_Semantic_Spatial_and_Temporal_Aspects_WACVW_2025_paper.pdf)</mark> | 2025 | WACV Workshop | video editing evaluation metrics | [Code](https://github.com/custommetrics-sst/SST_CustomEvaluationMetrics) |
 | [SGEdit: Bridging LLM with Text2Image Generative Model for Scene Graph-based Image Editing](https://arxiv.org/abs/2410.11815) | 2024 | SIGGRAPH Asia | Diffusion, scene graph, image-editing | [Code](https://github.com/bestzzhang/SGEdit-code) |
 | [Audio-Agent: Leveraging LLMs For Audio Generation, Editing and Composition](https://arxiv.org/abs/2410.03335) | 2024 | arXiv | Text-to-Audio, Multimodal |  |
 | [AudioEditor: A Training-Free Diffusion-Based Audio Editing Framework](https://arxiv.org/abs/2409.12466) | 2024 | arXiv | Diffusion-based text-to-audio | [Code](https://github.com/NKU-HLT/AudioEditor) |
