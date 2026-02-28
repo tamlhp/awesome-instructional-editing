@@ -96,6 +96,8 @@ If you find this work helpful in your research, welcome to cite the paper and gi
 | -------|------|-------|----------|------|
 | [Dragging with Geometry: From Pixels to Geometry-Guided Image Editing](https://openreview.net/forum?id=MBiMt3wp8M) | 2026 | ICML | interactive point-based image editing, geometry-guided dragging, 3D cues | [Code](https://github.com/xinyu-pu/GeoDrag) |
 | [Follow-Your-Shape: Shape-Aware Image Editing via Trajectory-Guided Region Control](https://openreview.net/forum?id=uGaR7L3Z1E) | 2026 | ICLR | shape-aware image editing | [Code](https://github.com/mayuelala/FollowYourShape) |
+| [UTDesign: A Unified Framework for Stylized Text Editing and Generation in Graphic Design Images](https://dl.acm.org/doi/10.1145/3757377.3763923) | 2025 | SIGGRAPH Asia | stylized text editing and generation | [Code](https://github.com/ZYM-PKU/UTDesign) |
+| [EditInfinity: Image Editing with Binary-Quantized Generative Models](https://openreview.net/forum?id=vhzqdxuSB3) | 2025 | NeurIPS | text-driven image editing, binary-quantized generative models | [Code](https://github.com/yx-chen-ust/EditInfinity) |
 | [Exploring Optimal Latent Trajetory for Zero-shot Image Editing](https://arxiv.org/abs/2501.03631) | 2025 | arXiv | zero-shot image editing |  |
 | [FramePainter: Endowing Interactive Image Editing with Video Diffusion Priors](https://arxiv.org/abs/2501.08225) | 2025 | arXiv | interactive image editing |  |
 | [Energy-Guided Optimization for Personalized Image Editing with Pretrained Text-to-Image Diffusion Models](https://arxiv.org/abs/2503.04215) | 2025 | arXiv | personalized image editing |  |
@@ -214,6 +216,7 @@ If you find this work helpful in your research, welcome to cite the paper and gi
 | **Title** | **Year** | **Venue** | **Category** | **Code** |
 | -------|------|-------|----------|------|
 | [Dreamcrafter: Immersive Editing of 3D Radiance Fields Through Flexible, Generative Inputs and Outputs](https://dl.acm.org/doi/10.1145/3672539.3686328) | 2025 | CHI | 3D Radiance Field editing | [Project](https://dream-crafter.github.io/) |
+| [SVG-Head: Hybrid Surface-Volumetric Gaussians for High-Fidelity Head Reconstruction and Real-Time Editing](https://openaccess.thecvf.com/content/ICCV2025/html/Sun_SVG-Head_Hybrid_Surface-Volumetric_Gaussians_for_High-Fidelity_Head_Reconstruction_and_Real-Time_ICCV_2025_paper.html) | 2025 | ICCV | head reconstruction and real-time editing | [Code](https://github.com/heyy-sun/SVG-Head) |
 | [Edit as You See: Image-guided Video Editing via Masked Motion Modeling](https://arxiv.org/abs/2501.04325) | 2025 | arXiv | image-guided video editing |  |
 | [CAD-Editor: A Locate-then-Infill Framework with Automated Training Data Synthesis for Text-Based CAD Editing](https://arxiv.org/abs/2502.03997) | 2025 | arXiv | Text-Based CAD Editing |  |
 | [MRHaD: Mixed Reality-based Hand-Drawn Map Editing Interface for Mobile Robot Navigation](https://arxiv.org/abs/2504.00580) | 2025 | arXiv | mixed reality map editing |  |
@@ -266,6 +269,7 @@ If you find this work helpful in your research, welcome to cite the paper and gi
 | [Reason-Edit](http://arxiv.org/abs/2312.06739v1) |  12.4M+  | 1 | [Link](https://github.com/TencentARC/SmartEdit)
 | [MagicBrush](http://arxiv.org/abs/2306.10012v3) |  10K  | 1 | [Link](https://osu-nlp-group.github.io/MagicBrush/)
 | [InstructPix2Pix](http://arxiv.org/abs/2211.09800v2) |  500K  | 1 | [Link](https://github.com/timothybrooks/instruct-pix2pix)
+| [ICE-Bench](https://openaccess.thecvf.com/content/ICCV2025/html/Pan_ICE-Bench_A_Unified_and_Comprehensive_Benchmark_for_Image_Creating_and_ICCV_2025_paper.html) |  6.5K  | 1 | [Link](https://github.com/ali-vilab/ICE-Bench)
 | [EditBench](http://arxiv.org/abs/2212.06909v2) |  240  | 1 | [Link](https://imagen.research.google/editor/)
 
 ### Type: Image Captioning 
