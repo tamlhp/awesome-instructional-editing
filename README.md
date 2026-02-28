@@ -213,6 +213,7 @@ If you find this work helpful in your research, welcome to cite the paper and gi
 ## Approaches for Media Editing
 | **Title** | **Year** | **Venue** | **Category** | **Code** |
 | -------|------|-------|----------|------|
+| [Dreamcrafter: Immersive Editing of 3D Radiance Fields Through Flexible, Generative Inputs and Outputs](https://dl.acm.org/doi/10.1145/3672539.3686328) | 2025 | CHI | 3D Radiance Field editing | [Project](https://dream-crafter.github.io/) |
 | [Edit as You See: Image-guided Video Editing via Masked Motion Modeling](https://arxiv.org/abs/2501.04325) | 2025 | arXiv | image-guided video editing |  |
 | [CAD-Editor: A Locate-then-Infill Framework with Automated Training Data Synthesis for Text-Based CAD Editing](https://arxiv.org/abs/2502.03997) | 2025 | arXiv | Text-Based CAD Editing |  |
 | [MRHaD: Mixed Reality-based Hand-Drawn Map Editing Interface for Mobile Robot Navigation](https://arxiv.org/abs/2504.00580) | 2025 | arXiv | mixed reality map editing |  |
