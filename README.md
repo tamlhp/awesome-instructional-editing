@@ -207,6 +207,7 @@ If you find this work helpful in your research, welcome to cite the paper and gi
 | <mark>[ReFlex: Text-Guided Editing of Real Images in Rectified Flow via Mid-Step Feature Extraction and Attention Adaptation](https://arxiv.org/abs/2507.01496)</mark> | 2025 | arXiv | text-guided image editing |  |
 | <mark>[LUSD: Localized Update Score Distillation for Text-Guided Image Editing](https://arxiv.org/abs/2503.11054)</mark> | 2025 | arXiv | text-guided image editing |  |
 | <mark>[UIP2P: Unsupervised Instruction-based Image Editing via Edit Reversibility Constraint](https://arxiv.org/abs/2412.15216)</mark> | 2024 | arXiv | instruction-based image editing |  |
+| <mark>[Dragging with Geometry: From Pixels to Geometry-Guided Image Editing](https://arxiv.org/abs/2509.25740)</mark> | 2025 | arXiv | interactive point-based image editing, geometry-guided dragging, 3D cues | [Code](https://github.com/xinyu-pu/GeoDrag) |
 
 ## Approaches for Media Editing
 | **Title** | **Year** | **Venue** | **Category** | **Code** |
