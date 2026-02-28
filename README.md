@@ -330,6 +330,10 @@ If you find this work helpful in your research, welcome to cite the paper and gi
 ----------
 ## Evaluation Metrics
 
+| **Title** | **Year** | **Venue** | **Category** | **Code** |
+| -------|------|-------|----------|------|
+| <mark>[SST-EM: Advanced Metrics for Evaluating Semantic, Spatial and Temporal Aspects in Video Editing](https://openaccess.thecvf.com/content/WACV2025W/ImageQuality/papers/Biyyala_SST-EM_Advanced_Metrics_for_Evaluating_Semantic_Spatial_and_Temporal_Aspects_WACVW_2025_paper.pdf)</mark> | 2025 | WACV Workshop | video editing evaluation metrics | [Code](https://github.com/custommetrics-sst/SST_CustomEvaluationMetrics) |
+
 | **Category** | **Evaluation Metrics** | **Formula** | **Usage** |
 | ----------|--------------------|---------|-------|
 | Perceptual Quality | Learned Perceptual Image Patch Similarity (LPIPS) | $\text{LPIPS}(x, x') = \sum_l \|\|\phi_l(x) - \phi_l(x')\|\|^2$ | Measures perceptual similarity between images, with lower scores indicating higher similarity. |
