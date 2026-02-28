@@ -207,6 +207,7 @@ If you find this work helpful in your research, welcome to cite the paper and gi
 | <mark>[ReFlex: Text-Guided Editing of Real Images in Rectified Flow via Mid-Step Feature Extraction and Attention Adaptation](https://arxiv.org/abs/2507.01496)</mark> | 2025 | arXiv | text-guided image editing |  |
 | <mark>[LUSD: Localized Update Score Distillation for Text-Guided Image Editing](https://arxiv.org/abs/2503.11054)</mark> | 2025 | arXiv | text-guided image editing |  |
 | <mark>[UIP2P: Unsupervised Instruction-based Image Editing via Edit Reversibility Constraint](https://arxiv.org/abs/2412.15216)</mark> | 2024 | arXiv | instruction-based image editing |  |
+| <mark>[Dragging with Geometry: From Pixels to Geometry-Guided Image Editing](https://openreview.net/forum?id=MBiMt3wp8M)</mark> | 2026 | ICML | interactive point-based image editing, geometry-guided dragging, 3D cues | [Code](https://github.com/xinyu-pu/GeoDrag) |
 
 ## Approaches for Media Editing
 | **Title** | **Year** | **Venue** | **Category** | **Code** |
@@ -544,6 +545,7 @@ If you have some other related references, please feel free to create a Github i
 ![Visitor Count](https://img.shields.io/badge/dynamic/json?color=success&label=visits&query=value&url=https://raw.githubusercontent.com/tamlhp/awesome-instruction-editing/main/data/visits.json)
 
 ![Visitors](https://margherita-gustatory-zane.ngrok-free.dev/badge/tamlhp%2Fawesome-instructional-editing.svg?ngrok-skip-browser-warning=true)
+
 
 
 
