@@ -95,6 +95,7 @@ If you find this work helpful in your research, welcome to cite the paper and gi
 | **Title** | **Year** | **Venue** | **Category** | **Code** |
 | -------|------|-------|----------|------|
 | [Dragging with Geometry: From Pixels to Geometry-Guided Image Editing](https://openreview.net/forum?id=MBiMt3wp8M) | 2026 | ICML | interactive point-based image editing, geometry-guided dragging, 3D cues | [Code](https://github.com/xinyu-pu/GeoDrag) |
+| [Follow-Your-Shape: Shape-Aware Image Editing via Trajectory-Guided Region Control](https://openreview.net/forum?id=uGaR7L3Z1E) | 2026 | ICLR | shape-aware image editing | [Code](https://github.com/mayuelala/FollowYourShape) |
 | [Exploring Optimal Latent Trajetory for Zero-shot Image Editing](https://arxiv.org/abs/2501.03631) | 2025 | arXiv | zero-shot image editing |  |
 | [FramePainter: Endowing Interactive Image Editing with Video Diffusion Priors](https://arxiv.org/abs/2501.08225) | 2025 | arXiv | interactive image editing |  |
 | [Energy-Guided Optimization for Personalized Image Editing with Pretrained Text-to-Image Diffusion Models](https://arxiv.org/abs/2503.04215) | 2025 | arXiv | personalized image editing |  |
