@@ -211,6 +211,7 @@ If you find this work helpful in your research, welcome to cite the paper and gi
 ## Approaches for Media Editing
 | **Title** | **Year** | **Venue** | **Category** | **Code** |
 | -------|------|-------|----------|------|
+| <mark>[IP-FaceDiff: Identity-Preserving Facial Video Editing with Diffusion](https://openaccess.thecvf.com/content/WACV2025W/ImageQuality/papers/Anand_IP-FaceDiff_Identity-Preserving_Facial_Video_Editing_with_Diffusion_WACVW_2025_paper.pdf)</mark> | 2025 | WACV Workshop | facial video editing, diffusion, identity preservation | - |
 | [SGEdit: Bridging LLM with Text2Image Generative Model for Scene Graph-based Image Editing](https://arxiv.org/abs/2410.11815) | 2024 | SIGGRAPH Asia | Diffusion, scene graph, image-editing | [Code](https://github.com/bestzzhang/SGEdit-code) |
 | [Audio-Agent: Leveraging LLMs For Audio Generation, Editing and Composition](https://arxiv.org/abs/2410.03335) | 2024 | arXiv | Text-to-Audio, Multimodal |  |
 | [AudioEditor: A Training-Free Diffusion-Based Audio Editing Framework](https://arxiv.org/abs/2409.12466) | 2024 | arXiv | Diffusion-based text-to-audio | [Code](https://github.com/NKU-HLT/AudioEditor) |
