@@ -98,6 +98,7 @@ If you find this work helpful in your research, welcome to cite the paper and gi
 | [Follow-Your-Shape: Shape-Aware Image Editing via Trajectory-Guided Region Control](https://openreview.net/forum?id=uGaR7L3Z1E) | 2026 | ICLR | shape-aware image editing | [Code](https://github.com/mayuelala/FollowYourShape) |
 | [UTDesign: A Unified Framework for Stylized Text Editing and Generation in Graphic Design Images](https://dl.acm.org/doi/10.1145/3757377.3763923) | 2025 | SIGGRAPH Asia | stylized text editing and generation | [Code](https://github.com/ZYM-PKU/UTDesign) |
 | [EditInfinity: Image Editing with Binary-Quantized Generative Models](https://openreview.net/forum?id=vhzqdxuSB3) | 2025 | NeurIPS | text-driven image editing, binary-quantized generative models | [Code](https://github.com/yx-chen-ust/EditInfinity) |
+| [Prompt-Softbox-Prompt: A Free-Text Embedding Control for Image Editing](https://dl.acm.org/doi/10.1145/3746027.3755429) | 2025 | MM | free-text embedding control | [Code](https://github.com/yangyt46/PSP) |
 | [Exploring Optimal Latent Trajetory for Zero-shot Image Editing](https://arxiv.org/abs/2501.03631) | 2025 | arXiv | zero-shot image editing |  |
 | [FramePainter: Endowing Interactive Image Editing with Video Diffusion Priors](https://arxiv.org/abs/2501.08225) | 2025 | arXiv | interactive image editing |  |
 | [Energy-Guided Optimization for Personalized Image Editing with Pretrained Text-to-Image Diffusion Models](https://arxiv.org/abs/2503.04215) | 2025 | arXiv | personalized image editing |  |
