@@ -79,7 +79,7 @@ If you find this work helpful in your research, welcome to cite the paper and gi
 ## Existing Surveys
 | **Paper Title** | **Venue** | **Year** | **Focus** |
 | --------------- | ---- | ---- | ---- |
-| [A Survey of Multimodal Composite Editing and Retrieval](https://arxiv.org/abs/2409.05405) | arXiv | 2024 |  Media Retrieval  |
+| [A Survey of Multimodal Composite Editing and Retrieval](https://link.springer.com/article/10.1007/s44267-025-00086-x) | Visual Intelligence | 2025 |  Media Retrieval  |
 | [INFOBENCH: Evaluating Instruction Following Ability in Large Language Models](https://arxiv.org/abs/2401.03601) | arXiv | 2024 |  Text Editing  |
 | [Multimodal Image Synthesis and Editing: The Generative AI Era](https://ieeexplore.ieee.org/abstract/document/10230895) | TPAMI | 2023 | X-to-Image Generation |
 | [LLM-driven Instruction Following: Progresses and Concerns](https://aclanthology.org/2023.emnlp-tutorial.4/) | EMNLP | 2023 |  Text Editing  |
@@ -555,6 +555,7 @@ If you have some other related references, please feel free to create a Github i
 ![Visitor Count](https://img.shields.io/badge/dynamic/json?color=success&label=visits&query=value&url=https://raw.githubusercontent.com/tamlhp/awesome-instruction-editing/main/data/visits.json)
 
 ![Visitors](https://margherita-gustatory-zane.ngrok-free.dev/badge/tamlhp%2Fawesome-instructional-editing.svg?ngrok-skip-browser-warning=true)
+
 
 
 
