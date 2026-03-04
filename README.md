@@ -271,6 +271,7 @@ If you find this work helpful in your research, welcome to cite the paper and gi
 ### Type: General 
 | Dataset | #Items | #Papers Used | Link |
 | :-- | --- | --- | --- |
+| [DIM](https://openreview.net/forum?id=FaJ7WwIstO) |  14M+  | 1 | [Link](https://github.com/showlab/DIM)
 | [Reason-Edit](http://arxiv.org/abs/2312.06739v1) |  12.4M+  | 1 | [Link](https://github.com/TencentARC/SmartEdit)
 | [MagicBrush](http://arxiv.org/abs/2306.10012v3) |  10K  | 1 | [Link](https://osu-nlp-group.github.io/MagicBrush/)
 | [InstructPix2Pix](http://arxiv.org/abs/2211.09800v2) |  500K  | 1 | [Link](https://github.com/timothybrooks/instruct-pix2pix)
