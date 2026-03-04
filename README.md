@@ -96,6 +96,7 @@ If you find this work helpful in your research, welcome to cite the paper and gi
 
 | **Title** | **Year** | **Venue** | **Category** | **Code** |
 | -------|------|-------|----------|------|
+| <mark>[Draw-In-Mind: Rebalancing Designer-Painter Roles in Unified Multimodal Models Benefits Image Editing](https://openreview.net/forum?id=FaJ7WwIstO)</mark> | 2026 | ICLR | Image Editing | [Code](https://github.com/showlab/DIM) |
 | [Dragging with Geometry: From Pixels to Geometry-Guided Image Editing](https://openreview.net/forum?id=MBiMt3wp8M) | 2026 | ICML | interactive point-based image editing, geometry-guided dragging, 3D cues | [Code](https://github.com/xinyu-pu/GeoDrag) |
 | [Follow-Your-Shape: Shape-Aware Image Editing via Trajectory-Guided Region Control](https://openreview.net/forum?id=uGaR7L3Z1E) | 2026 | ICLR | shape-aware image editing | [Code](https://github.com/mayuelala/FollowYourShape) |
 | [UTDesign: A Unified Framework for Stylized Text Editing and Generation in Graphic Design Images](https://dl.acm.org/doi/10.1145/3757377.3763923) | 2025 | SIGGRAPH Asia | stylized text editing and generation | [Code](https://github.com/ZYM-PKU/UTDesign) |
