@@ -219,6 +219,7 @@ If you find this work helpful in your research, welcome to cite the paper and gi
 ## Approaches for Media Editing
 | **Title** | **Year** | **Venue** | **Category** | **Code** |
 | -------|------|-------|----------|------|
+| <mark>[Audio-sync Video Instance Editing with Granularity-Aware Mask Refiner](https://doi.org/10.48550/arxiv.2512.10571)</mark> | 2025 | arXiv (Cornell University) | Video Editing, Audio Editing, dataset | - |
 | [Dreamcrafter: Immersive Editing of 3D Radiance Fields Through Flexible, Generative Inputs and Outputs](https://dl.acm.org/doi/10.1145/3672539.3686328) | 2025 | CHI | 3D Radiance Field editing | [Project](https://dream-crafter.github.io/) |
 | [SVG-Head: Hybrid Surface-Volumetric Gaussians for High-Fidelity Head Reconstruction and Real-Time Editing](https://openaccess.thecvf.com/content/ICCV2025/html/Sun_SVG-Head_Hybrid_Surface-Volumetric_Gaussians_for_High-Fidelity_Head_Reconstruction_and_Real-Time_ICCV_2025_paper.html) | 2025 | ICCV | head reconstruction and real-time editing | [Code](https://github.com/heyy-sun/SVG-Head) |
 | <mark>[IP-FaceDiff: Identity-Preserving Facial Video Editing with Diffusion](https://openaccess.thecvf.com/content/WACV2025W/ImageQuality/papers/Anand_IP-FaceDiff_Identity-Preserving_Facial_Video_Editing_with_Diffusion_WACVW_2025_paper.pdf)</mark> | 2025 | WACV Workshop | facial video editing, diffusion, identity preservation | [Code](https://github.com/Tharun-Anand/IP-FaceDiff) |
@@ -271,6 +272,7 @@ If you find this work helpful in your research, welcome to cite the paper and gi
 ### Type: General 
 | Dataset | #Items | #Papers Used | Link |
 | :-- | --- | --- | --- |
+| [VIEGM](https://doi.org/10.48550/arxiv.2512.10571) |  -  | 1 | [Link](-) |
 | [DIM](https://openreview.net/forum?id=FaJ7WwIstO) |  14M+  | 1 | [Link](https://github.com/showlab/DIM)
 | [Reason-Edit](http://arxiv.org/abs/2312.06739v1) |  12.4M+  | 1 | [Link](https://github.com/TencentARC/SmartEdit)
 | [MagicBrush](http://arxiv.org/abs/2306.10012v3) |  10K  | 1 | [Link](https://osu-nlp-group.github.io/MagicBrush/)
