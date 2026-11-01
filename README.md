@@ -340,6 +340,7 @@ If you find this work helpful in your research, welcome to cite the paper and gi
 | **Category** | **Evaluation Metrics** | **Formula** | **Usage** |
 | ----------|--------------------|---------|-------|
 | Perceptual Quality | Learned Perceptual Image Patch Similarity (LPIPS) | $\text{LPIPS}(x, x') = \sum_l \|\|\phi_l(x) - \phi_l(x')\|\|^2$ | Measures perceptual similarity between images, with lower scores indicating higher similarity. |
+| | Jacobian Lens Distance (JLD) | $\text{JLD}(x, x') = \sum_p \|\|U^\top(\phi_p(x) - \phi_p(x'))\|\|$ | Measures perceptual distance between DINOv2 patch features projected onto 64 Jacobian-lens directions fitted without human ratings, with lower scores indicating higher similarity. |
 | | Structural Similarity Index (SSIM) | $\text{SSIM}(x, x') = \frac{(2\mu_x\mu_{x'} + C_1)(2\sigma_{xx'} + C_2)}{(\mu_x^2 + \mu_{x'}^2 + C_1)(\sigma_x^2 + \sigma_{x'}^2 + C_2)}$ | Measures visual similarity based on luminance, contrast, and structure. |
 | | Fréchet Inception Distance (FID) | $\text{FID} = \|\|\mu_r - \mu_g\|\|^2 + \text{Tr}(\Sigma_r + \Sigma_g - 2(\Sigma_r \Sigma_g)^{1/2})$ | Measures the distance between the real and generated image feature distributions. |
 | | Inception Score (IS) | $\text{IS} = \exp(E_x D_{KL}(p(y\|x) \|\| p(y)))$ | Evaluates image quality and diversity based on label distribution consistency. |
