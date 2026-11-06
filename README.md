@@ -278,6 +278,7 @@ If you find this work helpful in your research, welcome to cite the paper and gi
 | [ICE-Bench](https://openaccess.thecvf.com/content/ICCV2025/html/Pan_ICE-Bench_A_Unified_and_Comprehensive_Benchmark_for_Image_Creating_and_ICCV_2025_paper.html) |  6.5K  | 1 | [Link](https://github.com/ali-vilab/ICE-Bench)
 | [GalaxyEdit](https://arxiv.org/abs/2411.13794) |  800K  | 1 | [Link](https://arxiv.org/abs/2411.13794)
 | [EditBench](http://arxiv.org/abs/2212.06909v2) |  240  | 1 | [Link](https://imagen.research.google/editor/)
+| [InfoEdit](https://arxiv.org/abs/2609.33286) |  4K  | 1 | [Link](https://github.com/InfoEdit/InfoEdit)
 
 ### Type: Image Captioning 
 | Dataset | #Items | #Papers Used | Link |
