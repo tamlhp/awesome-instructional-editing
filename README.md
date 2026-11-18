@@ -337,6 +337,7 @@ If you find this work helpful in your research, welcome to cite the paper and gi
 | **Title** | **Year** | **Venue** | **Category** | **Code** |
 | -------|------|-------|----------|------|
 | <mark>[SST-EM: Advanced Metrics for Evaluating Semantic, Spatial and Temporal Aspects in Video Editing](https://openaccess.thecvf.com/content/WACV2025W/ImageQuality/papers/Biyyala_SST-EM_Advanced_Metrics_for_Evaluating_Semantic_Spatial_and_Temporal_Aspects_WACVW_2025_paper.pdf)</mark> | 2025 | WACV Workshop | video editing evaluation metrics | [Code](https://github.com/custommetrics-sst/SST_CustomEvaluationMetrics) |
+| [JLD: Perceptual Distance Through A Jacobian Lens](https://arxiv.org/abs/2610.05967) | 2026 | arXiv | image editing evaluation metrics (full-reference perceptual distance) | [Code](https://github.com/shreshthsaini/jld) |
 
 | **Category** | **Evaluation Metrics** | **Formula** | **Usage** |
 | ----------|--------------------|---------|-------|
